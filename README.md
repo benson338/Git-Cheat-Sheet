@@ -124,3 +124,27 @@
 > When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit with a descriptive message. Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
 
 ### Git Collaboration
+
+> The git remote command is one piece of the broader system which is responsible for syncing changes. Records registered through the git remote command are used in conjunction with the git fetch, git push, and git pull commands.
+
+> The git remote command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories
+
+`git remote`
+
+> list the remote connections you have to other repositories
+
+`git remote -v`
+
+> to view the URL
+
+`git remote add [alias] [url]`
+
+`git remote add origin https://github.com/brad/proshop_mern`
+
+> create a new connection to a remote repository. After adding a remote, you’ll be able to use 'origin' as a convenient shortcut for URL in other Git commands
+
+#### Additional
+
+`git remote rm [alias]`
+
+> Remove the connection to the remote repository called [alias]
