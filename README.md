@@ -41,11 +41,19 @@
 
 > commit your staged content as a new commit snapshot
 
+`git commit -a`
+
+> commit a snapshot of all changes in the working directory. This only includes modifications to tracked files (those that have been added with git add at some point in their history)
+
+`git commit -am [descriptive message]`
+
+> a power user shortcut command that combines the -a and -m options. This combination immediately creates a commit of all the staged changes and takes an inline commit message
+
 `git log`
 
 > show all commits in the current branch’s history
 
-`git checkout [commitid]`
+`git checkout [commitId]`
 
 > switch to another commit (or any previous commits) and check it out into your working directory
 
@@ -58,6 +66,7 @@
 > create a new branch at the current commit
 
 `git branch`
+`git branch --all`
 
 > list your branches. a \* will appear next to the currently active branch
 
@@ -74,6 +83,8 @@
 > merge the specified branch's history into the current one (execute it from the branch we want to merge into)
 
 `git merge feature`
+
+`git merge [commitId]`
 
 > merge feature branch into the master branch (while staying on the master branch)
 
@@ -125,7 +136,7 @@
 
 ### Git Collaboration
 
-> The git remote command is one piece of the broader system which is responsible for syncing changes. Records registered through the git remote command are used in conjunction with the git fetch, git push, and git pull commands.
+> The git remote command is one piece of the broader system which is responsible for syncing changes. Records registered through the git remote command are used in conjunction with the git fetch, git push, and git pull commands
 
 > The git remote command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories
 
