@@ -139,12 +139,31 @@
 
 `git remote add [alias] [url]`
 
+> add a git URL as an alias
+
 `git remote add origin https://github.com/brad/proshop_mern`
 
 > create a new connection to a remote repository. After adding a remote, you’ll be able to use 'origin' as a convenient shortcut for URL in other Git commands
+
+`git push [alias] [branch]`
+
+> transmit local branch commits to the remote repository branch
+
+`git push -u origin master` OR
+
+`git push origin master`
+`git branch --set-upstream-to master origin/master`
+
+> when you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch you are pushing
+
+> adding a remote tracking branch means that git then knows what you want to do when you git fetch, git pull or git push in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
 
 #### Additional
 
 `git remote rm [alias]`
 
 > Remove the connection to the remote repository called [alias]
+
+`git remote rename [old-name] [new-name]`
+
+> rename a remote connection from [old-name] to [new-name]
