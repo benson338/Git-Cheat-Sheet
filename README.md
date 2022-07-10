@@ -69,8 +69,21 @@
 
 `git merge [branch]`
 
-> merge the specified branch's history into the current one(execute it from the branch we want to merge into)
+> merge the specified branch's history into the current one (execute it from the branch we want to merge into)
 
 `git merge feature`
 
 > merge feature branch into the master branch (while staying on the master branch)
+
+`git diff`
+
+> diff of what is changed but not staged
+
+`git diff --staged`
+
+> diff of what is staged but not yet committed
+
+`git stash`
+
+> stash the changes in a dirty working directory away
+> Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
