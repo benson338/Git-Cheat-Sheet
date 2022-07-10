@@ -1,5 +1,7 @@
 # Git Cheat Sheet
 
+---
+
 `git`
 
 > to list some common Git commands
