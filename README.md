@@ -66,3 +66,11 @@
 `git checkout -b [new-branch]`
 
 > to create a new branch & checkout
+
+`git merge [branch]`
+
+> merge the specified branch's history into the current one(execute it from the branch we want to merge into)
+
+`git merge feature`
+
+> merge feature branch into the master branch (while staying on the master branch)
