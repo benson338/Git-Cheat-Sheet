@@ -99,6 +99,14 @@
 
 > discard the changes from top of stash stack
 
+`git log --all --graph --decorate`
+
+`git log --all --graph --oneline --decorate`
+
+> the --graph option draws an ASCII graph representing the branch structure of the commit history. This is commonly used in conjunction with the --oneline and --decorate commands to make it easier to see which commit belongs to which branch
+
+### Notes
+
 `fast-forward merge:`
 
 > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip
