@@ -45,7 +45,7 @@
 
 > commit a snapshot of all changes in the working directory. This only includes modifications to tracked files (those that have been added with git add at some point in their history)
 
-`git commit -am [descriptive message]`
+`git commit -am "[descriptive message]"`
 
 > a power user shortcut command that combines the -a and -m options. This combination immediately creates a commit of all the staged changes and takes an inline commit message
 
@@ -78,15 +78,21 @@
 
 > to create a new branch & checkout
 
+`git branch -d [branch-name]`
+
+> delete branch
+
 `git merge [branch]`
 
 > merge the specified branch's history into the current one (execute it from the branch we want to merge into)
 
 `git merge feature`
 
+> merge feature branch into the master branch (while staying on the master branch)
+
 `git merge [commitId]`
 
-> merge feature branch into the master branch (while staying on the master branch)
+> to merge selected commit into the current branch
 
 `git diff`
 
@@ -96,21 +102,13 @@
 
 > diff of what is staged but not yet committed
 
-`git stash`
+`git reset`
 
-> stash the changes in a dirty working directory away. Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
+> reset staging area to match most recent commit, but leave the working directory unchanged
 
-`git stash list`
+`git reset --hard`
 
-> list stack-order of stashed file changes
-
-`git stash pop`
-
-> write working from top of stash stack
-
-`git stash drop`
-
-> discard the changes from top of stash stack
+> reset staging area and working directory to match most recent commit and overwrites all changes in the working directory
 
 `git log --all --graph --decorate`
 
@@ -140,14 +138,6 @@
 
 > The git remote command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories
 
-`git remote`
-
-> list the remote connections you have to other repositories
-
-`git remote -v`
-
-> to view the URL
-
 `git remote add [alias] [url]`
 
 > add a git URL as an alias
@@ -156,6 +146,14 @@
 
 > create a new connection to a remote repository. After adding a remote, you’ll be able to use 'origin' as a convenient shortcut for URL in other Git commands
 
+`git remote`
+
+> list the remote connections you have to other repositories
+
+`git remote -v`
+
+> to view the URL(s)
+
 `git push [alias] [branch]`
 
 > transmit local branch commits to the remote repository branch
@@ -163,13 +161,51 @@
 `git push -u origin master` OR
 
 `git push origin master`
-`git branch --set-upstream-to master origin/master`
+`git branch --set-upstream master origin/master`
 
 > when you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch you are pushing
 
 > adding a remote tracking branch means that git then knows what you want to do when you git fetch, git pull or git push in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
 
+`git pull`
+
+> fetch and merge any commits from the tracking remote branch (fetch + merge = pull)
+
+`git fetch [alias]`
+`git fetch origin`
+
+> fetch down all the branches from that Git remote
+
+`git pull [alias]`
+`git pull origin`
+
+> fetch the specified remote’s copy of current branch and immediately merge it into the local copy
+
 #### Additional
+
+`git stash`
+
+> stash the changes in a dirty working directory away. Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
+
+`git stash list`
+
+> list stack-order of stashed file changes
+
+`git stash pop`
+
+> write working from top of stash stack
+
+`git stash drop`
+
+> discard the changes from top of stash stack
+
+`git reset --hard [commit]`
+
+> clear staging area, rewrite working tree from specified commit
+
+`git reset [file]`
+
+> remove file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes
 
 `git remote rm [alias]`
 
@@ -177,4 +213,4 @@
 
 `git remote rename [old-name] [new-name]`
 
-> rename a remote connection from [old-name]
+> rename a remote connection from [old-name] to [new-name]
