@@ -98,3 +98,11 @@
 `git stash drop`
 
 > discard the changes from top of stash stack
+
+`fast-forward merge:`
+
+> A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip
+
+`3 way / recursive merge:`
+
+> a fast-forward merge is not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a 3-way merge. 3-way merges use a dedicated commit to tie together the two histories
