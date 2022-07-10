@@ -177,4 +177,4 @@
 
 `git remote rename [old-name] [new-name]`
 
-> rename a remote connection from [old-name] to [new-name]
+> rename a remote connection from [old-name]
