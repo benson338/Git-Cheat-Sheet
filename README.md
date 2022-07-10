@@ -85,5 +85,16 @@
 
 `git stash`
 
-> stash the changes in a dirty working directory away
-> Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
+> stash the changes in a dirty working directory away. Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
+
+`git stash list`
+
+> list stack-order of stashed file changes
+
+`git stash pop`
+
+> write working from top of stash stack
+
+`git stash drop`
+
+> discard the changes from top of stash stack
