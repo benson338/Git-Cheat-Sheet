@@ -45,7 +45,7 @@
 
 > commit a snapshot of all changes in the working directory. This only includes modifications to tracked files (those that have been added with git add at some point in their history)
 
-`git commit -am "[descriptive message]"`
+`git commit -am [descriptive message]`
 
 > a power user shortcut command that combines the -a and -m options. This combination immediately creates a commit of all the staged changes and takes an inline commit message
 
@@ -163,7 +163,7 @@
 `git push -u origin master` OR
 
 `git push origin master`
-`git branch --set-upstream master origin/master`
+`git branch --set-upstream-to master origin/master`
 
 > when you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch you are pushing
 
