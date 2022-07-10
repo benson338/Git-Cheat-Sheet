@@ -1,6 +1,6 @@
 # Git Cheat Sheet
 
----
+### Git Basics
 
 `git`
 
@@ -123,4 +123,4 @@
 
 > When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit with a descriptive message. Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
 
----
+### Git Collaboration
