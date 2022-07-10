@@ -114,3 +114,9 @@
 `3 way / recursive merge:`
 
 > a fast-forward merge is not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a 3-way merge. 3-way merges use a dedicated commit to tie together the two histories
+
+`merge conflicts:`
+
+> Sometimes multiple developers may try to edit the same content. If Developer A tries to edit code that Developer B is editing a conflict may occur. To alleviate the occurrence of conflicts developers will work in separate isolated branches. The git merge command's primary responsibility is to combine separate branches and resolve any conflicting edits.
+
+> When merge conflicts occurs, git responds by saying: Automatic merge failed; fix conflicts and then commit the result
