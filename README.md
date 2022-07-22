@@ -37,6 +37,12 @@
 
 > add all files in the current repository to the staging area
 
+`git reset [file]`
+
+`git restore --staged [file]`
+
+> remove file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes
+
 `git commit -m "[descriptive message]"`
 
 > commit your staged content as a new commit snapshot
@@ -52,10 +58,6 @@
 `git log`
 
 > show all commits in the current branch’s history
-
-`git checkout [commitId]`
-
-> switch to another commit (or any previous commits) and check it out into your working directory
 
 `git log --all`
 
@@ -77,6 +79,10 @@
 `git checkout -b [new-branch]`
 
 > to create a new branch & checkout
+
+`git checkout [commitId]`
+
+> switch to another commit (or any previous commits) and check it out into your working directory
 
 `git branch -d [branch-name]`
 
@@ -202,10 +208,6 @@
 `git reset --hard [commit]`
 
 > clear staging area, rewrite working tree from specified commit
-
-`git reset [file]`
-
-> remove file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes
 
 `git remote rm [alias]`
 
