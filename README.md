@@ -194,6 +194,7 @@
 > fetch the specified remote’s copy of current branch and immediately merge it into the local copy
 
 `git pull [alias] [branch-name]`
+
 `git pull origin master`
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
