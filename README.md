@@ -165,6 +165,7 @@
 > to view the URL(s)
 
 `git push [alias] [branch]`
+`git push origin master`
 
 > transmit local branch commits to the remote repository branch
 
