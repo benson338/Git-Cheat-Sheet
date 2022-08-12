@@ -34,7 +34,7 @@
 
 `git add [file1] [file2] [file3]`
 
-> add multiple files to stagin area
+> add multiple files to staging area
 
 `git add .`
 `git add --all`
