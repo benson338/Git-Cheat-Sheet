@@ -32,6 +32,10 @@
 
 > add a file as it looks now to your next commit (stage)
 
+`git add [file1] [file2] [file3]`
+
+> add multiple files to stagin area
+
 `git add .`
 `git add --all`
 
