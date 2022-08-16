@@ -202,7 +202,7 @@
 ### Additional | Undo Changes
 
 * Use `git checkout` to move around and review the commit history. 
-> `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
+* `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
 
 * `git reset` is best used for undoing local private changes
 
@@ -210,7 +210,7 @@
 
 <br>
 
-`git reset --hard [commit]` &/|| `git push -f`
+`git reset --hard [commit]` & `git push -f` if required
 
 > clear staging area, rewrite working tree from specified commit
 
