@@ -208,7 +208,7 @@
 
 * `git revert` is the best tool for undoing shared public changes
 
-
+<br>
 
 `git reset --hard [commit]`
 
