@@ -201,6 +201,8 @@
 
 ### Additional | Undo Changes
 
+* Use `git checkout` to move around and review the commit history
+
 `git reset --hard [commit]`
 
 > clear staging area, rewrite working tree from specified commit
