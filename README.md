@@ -144,7 +144,7 @@
 
 `merge commit`
 
-> i, esc, :wq
+> i - insert, esc, :wq - quit
 
 `git merge --abort`
 
