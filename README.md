@@ -210,7 +210,7 @@
 
 <br>
 
-`git reset --hard [commit]`
+`git reset --hard [commit]` &/|| `git push -f`
 
 > clear staging area, rewrite working tree from specified commit
 
