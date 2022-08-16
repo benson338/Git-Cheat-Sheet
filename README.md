@@ -199,7 +199,7 @@
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
 
-#### Additional | Stash | Undo
+### Additional | Stash | Undo
 
 `git stash`
 
