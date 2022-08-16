@@ -203,6 +203,10 @@
 
 * Use `git checkout` to move around and review the commit history
 
+* `git reset` is best used for undoing local private changes
+
+* `git revert` is the best tool for undoing shared public changes
+
 `git reset --hard [commit]`
 
 > clear staging area, rewrite working tree from specified commit
