@@ -144,7 +144,7 @@
 
 `git merge --abort`
 
-<br>
+> cancel merging to current branch
 
 ### Git Collaboration
 
