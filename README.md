@@ -199,7 +199,13 @@
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
 
-### Additional | Stash | Undo
+### Additional | Undo Changes
+
+`git reset --hard [commit]`
+
+> clear staging area, rewrite working tree from specified commit
+
+### Additional | Stash
 
 `git stash`
 
@@ -235,9 +241,7 @@
 
 > delete all stashes
 
-`git reset --hard [commit]`
-
-> clear staging area, rewrite working tree from specified commit
+### Additional | Misc
 
 `git remote rm [alias]`
 
