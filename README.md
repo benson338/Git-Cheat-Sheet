@@ -218,9 +218,12 @@
 
 > create a new commit with the inverse of the last commit
 
-`git revert --no-commit olderCommit^..HEAD`
+`git revert --no-commit [oldCommit]^..HEAD` OR
+`git revert --no-commit [oldCommit]^..[newCommit]`
 
 `git commit -m "[descriptive message]"`
+
+> Revert all commits from and oldCommit to HEAD
 
 ### Additional | Stash
 
