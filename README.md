@@ -203,7 +203,13 @@
 
 `git stash`
 
+`git stash save "[descriptive message]"`
+
 > stash the changes in a dirty working directory away. Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
+
+`git stash -u`
+
+> adding the -u option (or --include-untracked) tells git stash to also stash your untracked files
 
 `git stash list`
 
@@ -211,11 +217,25 @@
 
 `git stash pop`
 
-> write working from top of stash stack
+> popping your stash removes the changes from your stash and reapplies them to your working copy
+
+`git stash apply`
+
+> alternatively, we can reapply the changes to our working copy and keep them in the stash
+
+`git stash pop [stash-identifier]`
+
+> by default, git stash pop will re-apply the most recently created stash: stash@{0}. You can choose which stash to re-apply by passing its identifier as the last argument
+
+You can choose which stash to re-apply by passing its identifier as the last argument
 
 `git stash drop`
 
 > discard the changes from top of stash stack
+
+`git stash clear`
+
+> delete all stashes
 
 `git reset --hard [commit]`
 
