@@ -201,7 +201,7 @@
 
 ### Additional | Undo Changes
 
-* Use `git checkout` to move around and review the commit history. -> git checkout [old-commitId] -> checkout new branch
+* Use `git checkout` to move around and review the commit history. `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
 
 * `git reset` is best used for undoing local private changes
 
