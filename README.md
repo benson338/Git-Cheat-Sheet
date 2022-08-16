@@ -199,7 +199,7 @@
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
 
-#### Additional
+#### Additional | Stash | Undo
 
 `git stash`
 
@@ -226,8 +226,6 @@
 `git stash pop [stash-identifier]`
 
 > by default, git stash pop will re-apply the most recently created stash: stash@{0}. You can choose which stash to re-apply by passing its identifier as the last argument
-
-You can choose which stash to re-apply by passing its identifier as the last argument
 
 `git stash drop`
 
