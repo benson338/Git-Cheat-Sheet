@@ -126,8 +126,6 @@
 
 > the --graph option draws an ASCII graph representing the branch structure of the commit history. This is commonly used in conjunction with the --oneline and --decorate commands to make it easier to see which commit belongs to which branch
 
-<br>
-
 ### Notes
 
 `fast-forward merge:`
@@ -145,8 +143,6 @@
 > When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit with a descriptive message. Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
 
 `git merge --abort`
-
-<br>
 
 ### Git Collaboration
 
@@ -205,8 +201,6 @@
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
 
-<br>
-
 ### Additional | Undo Changes
 
 * Use `git checkout` to move around and review the commit history. 
@@ -238,8 +232,6 @@
 > revert last x commits
 
 `git revert --abort`
-
-<br>
 
 ### Additional | Stash
 
@@ -276,8 +268,6 @@
 `git stash clear`
 
 > delete all stashes
-
-<br>
 
 ### Additional | Misc
 
