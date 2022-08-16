@@ -214,6 +214,14 @@
 
 > clear staging area, rewrite working tree from specified commit
 
+`git revert HEAD`
+
+> create a new commit with the inverse of the last commit
+
+`git revert --no-commit olderCommit^..HEAD`
+
+`git commit -m "[descriptive message]"`
+
 ### Additional | Stash
 
 `git stash`
