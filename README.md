@@ -210,7 +210,7 @@
 
 <br>
 
-`git reset --hard [commit]` & `git push -f` if required
+`git reset --hard [commit]` && `git push -f` if required
 
 > clear staging area, rewrite working tree from specified commit
 
@@ -219,11 +219,17 @@
 > create a new commit with the inverse of the last commit
 
 `git revert --no-commit [oldCommit]^..HEAD` OR
-`git revert --no-commit [oldCommit]^..[newCommit]`
+`git revert --no-commit [oldCommit]^..[newCommit]` &&
 
 `git commit -m "[descriptive message]"`
 
-> Revert all commits from and oldCommit to HEAD
+> revert all commits from and oldCommit to HEAD. ie, ineffect we get [oldCommit - 1]
+
+`git revert --no-commit HEAD~x..` && `git commit -m "[descriptive message]"`
+
+> revert last x commits
+
+
 
 ### Additional | Stash
 
