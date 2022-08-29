@@ -277,7 +277,7 @@
 
 ### Additional | Misc
 
-1. To selectively merge files from one branch into another branch
+    1. To selectively merge files from one branch into another branch
 
 `git merge --no-commit --no-ff branchX`
 
