@@ -288,7 +288,9 @@ Selective Merge |=> `git merge --no-commit --no-ff [branch]`
 Squash commits in a branch
 
 `git checkout [branch]`
+
 `git reset --soft [commitID b4 branching]`
+
 `git commit -m [squash commit message]`
 
 <!-- > to combine several sequential commits into a new one & other use cases -->
