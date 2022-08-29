@@ -112,13 +112,17 @@
 
 > diff of what is staged but not yet committed
 
-`git reset`
+`git reset` `git reset --mixed`
 
 > reset staging area to match most recent commit, but leave the working directory unchanged
 
 `git reset --hard`
 
 > reset staging area and working directory to match most recent commit and overwrites all changes in the working directory
+
+`git reset --soft`
+
+> add all changes to the staging area, but leave the working directory unchanged
 
 `git log --all --graph --decorate`
 
@@ -277,13 +281,21 @@
 
 ### Additional | Misc
 
-1. To selectively merge files from one branch into another branch
+Selective Merge | `git merge --no-commit --no-ff [branch]`
 
-   `git merge --no-commit --no-ff branchX`
+> to selectively merge files from one branch into another branch, no commit & no fast forward
+
+Squash commits in a branch | `git checkout [branch]` => `git reset --soft [commitID b4 branching]` => `git commit -m [squash commit message]`
+
+> to combine several sequential commits into a new one & other use cases
+
+`git commit --amend`
+
+> to add/rm files from the very last commit or to change its message
 
 `git remote rm [alias]`
 
-> Remove the connection to the remote repository called [alias]
+> remove the connection to the remote repository called [alias]
 
 `git remote rename [old-name] [new-name]`
 
