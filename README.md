@@ -28,9 +28,9 @@
 
 > show modified files in working directory, staged for your next commit
 
-`git add [file]`
+`git add [file]` `git add [path-name]`
 
-> add a file as it looks now to your next commit (stage)
+> add a file/folder as it looks now to your next commit (stage)
 
 `git add [file1] [file2] [file3]`
 
@@ -41,7 +41,7 @@
 
 > add all files in the current repository to the staging area
 
-`git reset [file]`
+`git reset [file]` `git reset [path-name]`
 
 `git restore --staged [file]`
 
@@ -96,9 +96,9 @@
 
 > merge the specified branch's history into the current one (execute it from the branch we want to merge into)
 
-`git merge feature`
+`git merge featureBranch`
 
-> merge feature branch into the master branch (while staying on the master branch)
+> merge featureBranch into the master branch (while staying on the master branch)
 
 `git merge [commitId]`
 
@@ -209,12 +209,12 @@
 
 ### Additional | Undo Changes
 
-* Use `git checkout` to move around and review the commit history. 
-* `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
+- Use `git checkout` to move around and review the commit history.
+- `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
 
-* `git reset` is best used for undoing local private changes
+- `git reset` is best used for undoing local private changes
 
-* `git revert` is the best tool for undoing shared public changes
+- `git revert` is the best tool for undoing shared public changes
 
 <br>
 
@@ -276,6 +276,10 @@
 > delete all stashes
 
 ### Additional | Misc
+
+1. To selectively merge files from one branch into another branch
+
+`git merge --no-commit --no-ff branchX`
 
 `git remote rm [alias]`
 
