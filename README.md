@@ -285,16 +285,9 @@ Selective Merge |=> `git merge --no-commit --no-ff [branch]`
 
 > to selectively merge files from one branch into another branch, no commit & no fast forward
 
-Squash commits in a branch
+Squash commits in a branch | `git checkout [branch]` => `git reset --soft [commitID b4 branching]` => `git commit -m [squash commit message]`
 
-`git checkout [branch]`
-
-`git reset --soft [commitID b4 branching]`
-
-`git commit -m [squash commit message]`
-
-<!-- > to combine several sequential commits into a new one & other use cases -->
-<br>
+> to combine several sequential commits into a new one & other use cases(--soft)
 
 `git commit --amend`
 
