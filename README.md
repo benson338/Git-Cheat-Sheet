@@ -204,7 +204,9 @@
 `git pull`
 
 > fetch and merge any commits from the tracking remote branch (fetch + merge = pull)
-> git pull = git fetch origin + git merge origin/<current-branch>
+
+> git pull = git fetch origin + git merge origin/[current-branch]
+
 > git pull first invokes git fetch, in normal cases fetching all commits on all branches from the remote, git pull then invokes git merge(into the current branch), normally the branch merged in is the HEAD of the remote repository, but the choice is determined by the branch
 
 `git pull [alias]`
