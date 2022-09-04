@@ -244,7 +244,7 @@
 
 ### Notes | Collaboration
 
-- `git branch -vv`: to see tracking/upstream branches
+- `git branch -vv` to see tracking/upstream branches
 - for a cloned repository, the branch tracking are set up automatically (for all the fetched branches)
 - but if you add a remote to an existing repository & when you are creating a new local branch, you have to set up the tracking manually (--set-upstream w/ push)
 - after tracking is set up, you can use `git fetch`, `git pull`, `git push` directly while staying in the required branch
