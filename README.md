@@ -224,11 +224,11 @@
 
 `git pull origin`
 
-> update the remote-tracking branches for the repository you cloned from (or from the origin), then merge one of them into your current branch
+> update the remote-tracking branches for the repository you cloned from (or from the origin you created), then merge one of them into your current branch
 
 > `git pull` = `git fetch origin` + `git merge origin/[current-branch]` (into current-branch)
 
-> git pull first invokes git fetch, in normal cases fetching all commits on all branches from the remote, git pull then invokes git merge(into the current branch), normally the branch merged in is the HEAD of the remote repository, but the choice is determined by the branch
+> git pull first invokes git fetch, in normal cases fetching all commits on all branches from the remote, git pull then invokes git merge (into the current branch), normally the branch merged in is the HEAD of the remote repository, but the choice is determined by the branch
 
 > if the current branch is behind the remote, then by default it will fast-forward the current branch to match the remote
 
@@ -244,7 +244,7 @@
 
 ### Notes | Collaboration
 
-- `git branch -vv`: to see tracking/upstream branches
+- `git branch -vv` to see tracking/upstream branches
 - for a cloned repository, the branch tracking are set up automatically (for all the fetched branches)
 - but if you add a remote to an existing repository & when you are creating a new local branch, you have to set up the tracking manually (--set-upstream w/ push)
 - after tracking is set up, you can use `git fetch`, `git pull`, `git push` directly while staying in the required branch
