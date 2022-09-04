@@ -28,7 +28,9 @@
 
 > show modified files in working directory, staged for your next commit
 
-`git add [file]` `git add [path-name]`
+`git add [file]`
+
+`git add [path-name]`
 
 > add a file/folder as it looks now to your next commit (stage)
 
@@ -37,11 +39,14 @@
 > add multiple files to staging area
 
 `git add .`
-`git add --all`
+
+`git add (-A | --all)`
 
 > add all files in the current repository to the staging area
 
-`git reset [file]` `git reset [path-name]`
+`git reset [file]`
+
+`git reset [path-name]`
 
 `git restore --staged [file]`
 
@@ -72,6 +77,7 @@
 > create a new branch at the current commit
 
 `git branch`
+
 `git branch --all`
 
 > list your branches. a \* will appear next to the currently active branch
@@ -92,9 +98,11 @@
 
 > switch to another commit (or any previous commits) and check it out into your working directory
 
-`git branch -d [branch-name]`
+`git branch (-d | -D) [branch-name]` &
 
-> delete branch
+`git push origin :[branch-name]`
+
+> delete branch from local & remote repository
 
 `git merge [branch]`
 
@@ -108,6 +116,10 @@
 
 > to merge selected commit into the current branch
 
+`git merge --abort`
+
+> cancel merging to current branch
+
 `git diff`
 
 > diff of what is changed but not staged
@@ -116,7 +128,9 @@
 
 > diff of what is staged but not yet committed
 
-`git reset` `git reset --mixed`
+`git reset`
+
+`git reset --mixed`
 
 > reset staging area to match most recent commit, but leave the working directory unchanged
 
@@ -154,10 +168,6 @@
 
 > i - insert, esc, :wq - quit
 
-`git merge --abort`
-
-> cancel merging to current branch
-
 ### Git Collaboration
 
 > The git remote command is one piece of the broader system which is responsible for syncing changes. Records registered through the git remote command are used in conjunction with the git fetch, git push, and git pull commands
@@ -172,17 +182,15 @@
 
 > create a new connection to a remote repository. After adding a remote, you’ll be able to use 'origin' as a convenient shortcut for URL in other Git commands
 
-`git remote`
-
-> list the remote connections you have to other repositories
-
-`git remote -v`
-
-> to view the URL(s)
-
 `git push`
+
 `git push [alias]`
+
 `git push origin`
+
+> pushes the current branch to the configured upstream if it has the same name as the current branch, and errors out without pushing otherwise
+
+`git config [--global] push.default current`
 
 `git push [alias] [branch]`
 
@@ -192,8 +200,7 @@
 
 `git push -u origin master` OR
 
-`git push origin master`
-`git branch --set-upstream master origin/master`
+` git push --set-upstream origin master`
 
 > when you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch you are pushing
 
@@ -225,13 +232,25 @@
 
 `git pull origin master`
 
-> fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
+> fetch the specified remote’s copy of specified branch and immediately merge it into the current branch
 
 > merge into the current branch the remote branch master
 
+## Notes | Collaboration
+
+- `git push` default behaviour:
+
+  > the default behavior of this command when can be configured by setting the push option of the remote, or the push.default configuration variable (see notes)
+
+  - `git config push.default [possible-values]`
+
+  `git config [--global] push.default [possible-values]`
+
+  > possible values are nothing, current, simple(default), upstream(tracking), matching
+
 ### Additional | Undo Changes
 
-- Use `git checkout` to move around and review the commit history.
+- Use `git checkout` to move around and review the commit history
 - `git checkout [old-commitId]` -> `git checkout -b [new-branch]`
 
 - `git reset` is best used for undoing local private changes
@@ -299,17 +318,43 @@
 
 ### Additional | Misc
 
+`git branch -vv`
+
+`git remote show origin`
+
+> to see tracking/upstream branches & other useful info
+
+`git branch -D [branch1] [branch2] [branch3]`
+
+> to delete multiple local branches
+
+Squash commits in a branch |=> `git checkout [feature-branch]` => `git reset --soft [commitID b4 branching/ b4 creating feature-branch]` => `git commit -m [squash commit message]`
+
+> to combine several sequential commits into a new one
+
 Selective Merge |=> `git merge --no-commit --no-ff [branch]`
 
 > to selectively merge files from one branch into another branch, no commit & no fast forward
 
-Squash commits in a branch |=> `git checkout [branch]` => `git reset --soft [commitID b4 branching]` => `git commit -m [squash commit message]`
-
-> to combine several sequential commits into a new one
-
 `git commit --amend`
 
 > to add/rm files from the very last commit or to change its message
+
+`git branch (-m | -M) [<oldbranch>] <newbranch>`
+
+`git branch -M <newbranch>`
+
+`git branch -M main`
+
+> Move/rename a branch
+
+`git remote`
+
+> list the remote connections you have to other repositories
+
+`git remote -v`
+
+> to view the URL(s)
 
 `git remote rm [alias]`
 
