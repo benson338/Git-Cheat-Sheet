@@ -134,7 +134,7 @@
 
 > the --graph option draws an ASCII graph representing the branch structure of the commit history. This is commonly used in conjunction with the --oneline and --decorate commands to make it easier to see which commit belongs to which branch
 
-### Notes
+### Notes | Merging
 
 `fast-forward merge:`
 
@@ -195,14 +195,17 @@
 
 > adding a remote tracking branch means that git then knows what you want to do when you git fetch, git pull or git push in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
 
-`git pull`
-
-> fetch and merge any commits from the tracking remote branch (fetch + merge = pull)
-
+`git fetch`
 `git fetch [alias]`
 `git fetch origin`
 
 > fetch down all the branches from that Git remote
+
+`git pull`
+
+> fetch and merge any commits from the tracking remote branch (fetch + merge = pull)
+> git pull = git fetch origin + git merge origin/<current-branch>
+> git pull first invokes git fetch, in normal cases fetching all commits on all branches from the remote, git pull then invokes git merge(into the current branch), normally the branch merged in is the HEAD of the remote repository, but the choice is determined by the branch
 
 `git pull [alias]`
 `git pull origin`
