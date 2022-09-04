@@ -190,8 +190,6 @@
 
 > pushes the current branch to the configured upstream if it has the same name as the current branch, and errors out without pushing otherwise
 
-`git config [--global] push.default current`
-
 `git push [alias] [branch]`
 
 `git push origin master`
@@ -236,17 +234,16 @@
 
 > merge into the current branch the remote branch master
 
-## Notes | Collaboration
+#### Notes | Collaboration
 
 - `git push` default behaviour:
 
   > the default behavior of this command when can be configured by setting the push option of the remote, or the push.default configuration variable (see notes)
 
   - `git config push.default [possible-values]`
+  - `git config [--global] push.default [possible-values]`
 
-  `git config [--global] push.default [possible-values]`
-
-  > possible values are nothing, current, simple(default), upstream(tracking), matching
+  > possible values are nothing, current, simple (default), upstream (tracking), matching
 
 ### Additional | Undo Changes
 
