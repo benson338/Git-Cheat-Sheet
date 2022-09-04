@@ -204,7 +204,7 @@
 
 > when you push to a remote and you use the --set-upstream flag git sets the branch you are pushing to as the remote tracking branch of the branch you are pushing
 
-> adding a remote tracking branch means that git then knows what you want to do when you git fetch, git pull or git push in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
+> adding a remote tracking branch means that git then knows what you want to do when you `git fetch`, `git pull` or `git push` in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
 
 `git push (-f | --force) [remote] [branch]`
 
@@ -242,7 +242,17 @@
 
 > `git fetch origin` + `git merge origin/master`
 
-#### Notes | Collaboration
+### Notes | Collaboration
+
+- for a cloned repository, the branch tracking are set up automatically (for all the fetched branches)
+- but if you add a remote to an existing repository & when you are creating a new local branch, you have to set up the tracking manually (--set-upstream w/ push)
+- after tracking is set up, you can use `git fetch`, `git pull`, `git push` directly while staying in the required branch
+
+- `git push` vs `git fetch`
+
+  > `git pull` tries to automatically merge after fetching commits. It is context sensitive, so all pulled commits will be merged into your currently active branch. git pull automatically merges the commits without letting you review them first. If you don’t carefully manage your branches, you may run into frequent conflicts.
+
+  > `git fetch` gathers any commits from the target branch that do not exist in the current branch and stores them in your local repository. However, it does not merge them with your current branch. This is particularly useful if you need to keep your repository up to date, but are working on something that might break if you update your files. To integrate the commits into your current branch, you must use git merge afterwards.
 
 - `git push` default behaviour:
 
@@ -252,15 +262,6 @@
   - `git config [--global] push.default [possible-values]`
 
     > possible values are nothing, current, simple (default), upstream (tracking), matching
-
-- for a cloned repository, the branch tracking are set up automatically (for all the fetched branches)
-- but if you add a remote to an existing repository & when you are creating a new local branch, you have to set up the tracking manually (--set-upstream w/ push)
-
-- `git push` vs `git fetch`
-
-  > git pull tries to automatically merge after fetching commits. It is context sensitive, so all pulled commits will be merged into your currently active branch. git pull automatically merges the commits without letting you review them first. If you don’t carefully manage your branches, you may run into frequent conflicts.
-
-  > git fetch gathers any commits from the target branch that do not exist in the current branch and stores them in your local repository. However, it does not merge them with your current branch. This is particularly useful if you need to keep your repository up to date, but are working on something that might break if you update your files. To integrate the commits into your current branch, you must use git merge afterwards.
 
 ### Additional | Undo Changes
 
