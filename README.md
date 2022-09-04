@@ -202,15 +202,16 @@
 > fetch down all the branches from that Git remote
 
 `git pull`
+`git pull [alias]`
+`git pull origin`
 
-> fetch and merge any commits from the tracking remote branch (fetch + merge = pull)
+> update the remote-tracking branches for the repository you cloned from(or origin), then merge one of them into your current branch
 
-> git pull = git fetch origin + git merge origin/[current-branch]
+> `git pull` = `git fetch origin` + `git merge origin/[current-branch]` (into current-branch)
 
 > git pull first invokes git fetch, in normal cases fetching all commits on all branches from the remote, git pull then invokes git merge(into the current branch), normally the branch merged in is the HEAD of the remote repository, but the choice is determined by the branch
 
-`git pull [alias]`
-`git pull origin`
+> if the current branch is behind the remote, then by default it will fast-forward the current branch to match the remote
 
 > fetch the specified remote’s copy of current branch and immediately merge it into the local copy
 
