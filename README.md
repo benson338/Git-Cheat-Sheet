@@ -180,6 +180,10 @@
 
 > to view the URL(s)
 
+`git push`
+`git push [alias]`
+`git push origin`
+
 `git push [alias] [branch]`
 
 `git push origin master`
@@ -196,16 +200,20 @@
 > adding a remote tracking branch means that git then knows what you want to do when you git fetch, git pull or git push in future. It assumes that you want to keep the local branch and the remote branch it is tracking in sync and does the appropriate thing to achieve this
 
 `git fetch`
+
 `git fetch [alias]`
+
 `git fetch origin`
 
 > fetch down all the branches from that Git remote
 
 `git pull`
+
 `git pull [alias]`
+
 `git pull origin`
 
-> update the remote-tracking branches for the repository you cloned from(or origin), then merge one of them into your current branch
+> update the remote-tracking branches for the repository you cloned from (or from the origin), then merge one of them into your current branch
 
 > `git pull` = `git fetch origin` + `git merge origin/[current-branch]` (into current-branch)
 
@@ -213,13 +221,13 @@
 
 > if the current branch is behind the remote, then by default it will fast-forward the current branch to match the remote
 
-> fetch the specified remote’s copy of current branch and immediately merge it into the local copy
-
 `git pull [alias] [branch-name]`
 
 `git pull origin master`
 
 > fetch the specified remote’s copy of specified branch and immediately merge it into the local copy
+
+> merge into the current branch the remote branch master
 
 ### Additional | Undo Changes
 
