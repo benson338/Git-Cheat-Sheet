@@ -76,6 +76,10 @@
 
 > list your branches. a \* will appear next to the currently active branch
 
+`git branch -r`
+
+> to list all remote branches
+
 `git checkout [branch-name]`
 
 > switch to another branch (or latest commit if in the same branch) and check it out into your working directory
