@@ -112,10 +112,6 @@
 
 > merge featureBranch into the master branch (while staying on the master branch)
 
-`git merge [commitId]`
-
-> to merge selected commit into the current branch
-
 `git merge --abort`
 
 > cancel merging to current branch
