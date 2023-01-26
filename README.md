@@ -174,7 +174,7 @@
 
 > `git add [conflicted-file-1] [conflicted-file-2]`
 
-> `git commit` 
+> `git commit` | =>
 > vim editor controls => i - insert, esc, :wq - quit
 
 > use `git merge --abort` if you face any issues while merging (to cancel merging/pulling to current branch)
