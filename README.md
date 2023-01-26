@@ -150,12 +150,14 @@
 
 > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip
 
-![fast forward merge](https://wac-cdn.atlassian.com/dam/jcr:d90f2536-7951-4e5e-ab79-f45a502fb4c8/03-04%20Fast%20forward%20merge.svg?cdnVersion=742)
+![fast forward merge](03-04-Fast-forward-merge.svg)
 <!-- C:\BMK\Coding\Git\Git-Cheat-Sheet\fast-forward-merge.jpg -->
 
 `3 way / recursive merge:`
 
 > a fast-forward merge is not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a 3-way merge. 3-way merges use a dedicated commit to tie together the two histories
+
+![3 way merge](05-06-Fast-forward-merge.svg)
 
 `merge conflicts:`
 
