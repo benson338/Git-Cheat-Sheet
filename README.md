@@ -22,6 +22,8 @@
 
 `git clone https://github.com/bradtraversy/proshop_mern`
 
+`git clone [url] [custom-folder-name]`
+
 > retrieve an entire repository from a hosted location via URL
 
 `git status`
@@ -51,6 +53,10 @@
 `git restore --staged [file]`
 
 > remove file from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes
+
+`git rm --cached [file]`
+
+> removes a  file from tracking / staging area / keeps the file untracked
 
 `git commit -m "[descriptive message]"`
 
@@ -151,7 +157,6 @@
 > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip
 
 ![fast forward merge](03-04-Fast-forward-merge.svg)
-<!-- C:\BMK\Coding\Git\Git-Cheat-Sheet\fast-forward-merge.jpg -->
 
 `3 way / recursive merge:`
 
@@ -163,7 +168,7 @@
 
 > Sometimes multiple developers may try to edit the same content. If Developer A tries to edit code that Developer B is editing a conflict may occur. To alleviate the occurrence of conflicts developers will work in separate isolated branches. The git merge command's primary responsibility is to combine separate branches and resolve any conflicting edits.
 
-> When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit with a descriptive message. Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
+> When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit the changes (Use 'git commit' with default commit message). Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
 
 `merge commit`
 
@@ -380,3 +385,11 @@ Selective Merge |=> `git merge --no-commit --no-ff [branch]`
 `git remote rename [old-name] [new-name]`
 
 > rename a remote connection from [old-name] to [new-name]
+
+`git worktree add [path] [branch]`
+
+`git worktree list`
+
+`git worktree remove [path]`
+
+> create a linked copy of your git repository. [path] => outside/ above current working directory && [branch] => specify which branch to checkout in the new worktree
