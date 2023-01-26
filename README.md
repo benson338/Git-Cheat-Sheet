@@ -172,16 +172,12 @@
 
 > The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit the changes (Use 'git commit' with default commit message). Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
 
-  - `git add [conflicted-file-1] [conflicted-file-2]`
+> `git add [conflicted-file-1] [conflicted-file-2]`
 
-  - `git commit`
+> `git commit` 
+> vim editor controls => i - insert, esc, :wq - quit
 
-    > vim editor controls => i - insert, esc, :wq - quit
-
-
-`git merge --abort`
-
-> cancel merging to current branch
+> use `git merge --abort` if you face any issues while merging (to cancel merging/pulling to current branch)
 
 ### Git Collaboration
 
