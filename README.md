@@ -150,7 +150,7 @@
 
 > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip
 
-![fast forward merge](fast-forward-merge.jpg)
+![fast forward merge](https://wac-cdn.atlassian.com/dam/jcr:d90f2536-7951-4e5e-ab79-f45a502fb4c8/03-04%20Fast%20forward%20merge.svg?cdnVersion=742)
 <!-- C:\BMK\Coding\Git\Git-Cheat-Sheet\fast-forward-merge.jpg -->
 
 `3 way / recursive merge:`
