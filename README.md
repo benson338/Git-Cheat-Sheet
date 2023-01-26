@@ -185,6 +185,8 @@
 
 > The git remote command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories
 
+> `remote` in Git is a common repository that all team members use to exchange their changes. In most cases, such a remote repository is stored on a code hosting service like GitHub or on an internal server
+
 `git remote add [alias] [url]`
 
 > add a git URL as an alias
