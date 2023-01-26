@@ -257,7 +257,7 @@
 
 - `git push` default behaviour:
 
-  > the default behavior of this command when can be configured by setting the push option of the remote, or the push.default configuration variable (see notes)
+  > the default behavior of this command when can be configured by setting the push option of the remote, or the push.default configuration variable
 
   - `git config push.default [possible-values]`
   - `git config [--global] push.default [possible-values]`
