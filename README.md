@@ -168,11 +168,23 @@
 
 > Sometimes multiple developers may try to edit the same content. If Developer A tries to edit code that Developer B is editing a conflict may occur. To alleviate the occurrence of conflicts developers will work in separate isolated branches. The git merge command's primary responsibility is to combine separate branches and resolve any conflicting edits.
 
-> When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit the changes (Use 'git commit' with default commit message). Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
+> When merge conflicts occurs, git responds "Automatic merge failed; fix conflicts and then commit the result". The output from git status indicates that there are unmerged paths due to a conflict. 
+
+> The most direct way to resolve a merge conflict is to edit the conflicted file. Once the file has been edited, add the file to staging and then commit the changes (Use 'git commit' with default commit message). Git will see that the conflict has been resolved and creates a new merge commit to finalize the merge
+
+  `git add [conflicted-file-1] [conflicted-file-2]`
+
+  `git commit`
+
+    > vim editor controls => i - insert, esc, :wq - quit
 
 `merge commit`
 
 > i - insert, esc, :wq - quit
+
+`git merge --abort`
+
+> cancel merging to current branch
 
 ### Git Collaboration
 
